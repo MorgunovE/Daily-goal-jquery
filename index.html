@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Goal Tracking App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="Goal.js"></script>
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <link href="goals.css" type="text/css" rel="stylesheet" />
+</head>
+<style>
+  #goalLabel{
+    margin-top: 30px;
+  }
+</style>
+
+<body>
+  <div data-role='page' id="enterGoals">
+    <div data-role='header'>
+      <h1>Daily goal tracker</h1>
+    </div>
+    <div role="main" class='ui-content'>
+      <div id="goalsList"></div>
+      <form>
+        <label for="goal" id="goalLabel">Enter your goal</label>
+        <textarea id="goal" data-mini='true' cols="40" rows="6"></textarea>
+      </form>
+      <button id='btnSave'>Save my goal</button>
+      <button id='btnNewDay'>New day (clear all goals)</button>
+      <div data-role='popup' id='popupBasic'>
+        <p>Do you want complete this goal?</p>
+        <button id='btnComplete' onClick='completeGoal()'>Yes</button>
+        <button id='btnNo' onClick='closeDialog()'>No</button>
+      </div>
+    </div>
+    <div data-role='footer' class="footer">
+      <h4>Evgenii Morgunov</h4>
+    </div>
+  </div>
+  <script src="goalsJS.js"></script>
+</body>
+
+</html>
